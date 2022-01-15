@@ -1,0 +1,25 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Order Form
+        
+    body 
+        include ./partials/header
+        p 
+        | user who ordered this order: #{order.user_who_ordered}
+        br
+        | restaurant name: #{order.restaurantName}
+        br
+        | list of item names and quantities:
+        br
+        |
+        each item in order.order 
+            | - #{item.name}, item quantity: #{item.quantity}
+            br
+        | subtotal: #{order.subtotal}
+        br
+        | total: #{order.total}
+        br
+        | fee: #{order.fee}
+        br
+        | tax: #{order.tax}

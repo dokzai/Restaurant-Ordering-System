@@ -1,0 +1,10 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Home
+        
+    body 
+        include ./partials/header
+        each user in users 
+            a(href="/users/"+user._id) #{user.username}
+            br

@@ -1,0 +1,27 @@
+
+p
+    a(href="/") Home
+    | 
+    a(href="/users") Users
+    | 
+    if (!session.loggedin)
+        a(href="/register") Register
+        br
+        p
+            | Username: 
+            input(type='text', name='username', id='username', value='')
+            | Password: 
+            input(type='password', name='password', id='password', value='')
+            |
+            input(type='submit', name='login', id='login' value='Login')
+        div(id="message")
+    else 
+    
+        a(href="/order") Order Food 
+        | hello #{session.username},
+        |
+        a(href="/users/"+session.userId) click here to view your own profile
+        |
+        a(href="/logout")    log out 
+script(src='/header.js')
+

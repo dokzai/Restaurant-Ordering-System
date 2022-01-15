@@ -1,0 +1,20 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title order form
+        style
+            include ../public/style.css
+    body(onload="init()")
+        include ./partials/header
+        h1 Restaurant Order Form
+    
+        select(id="restaurant-select")
+        br
+        br
+        div(id="info")
+        div(id="main")
+            div(class="column left" id="left")
+            div(class="column middle" id="middle")
+            div(class="column right" id="right")
+
+        script(src='orderform.js')

@@ -1,0 +1,18 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Register
+        
+    body 
+        include ./partials/header
+        p
+            | Username: 
+            input(type='text', name='regusername', id='regusername', value='')
+            br
+            | Password: 
+            input(type='password', name='regpassword', id='regpassword', value='')
+            |
+            br
+            input(type='submit', name='register', id='register' value='Register')
+        div(id="message")
+script(src='/register.js')

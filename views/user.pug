@@ -1,0 +1,23 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Home
+        
+    body 
+        include ./partials/header
+        h4 username: #{username} 
+        h4 orders: 
+        each order in orders 
+            a(href="/order/"+order) #{order}
+            br
+        if (session.userId == user._id)
+            h4 privacy: 
+            input(type='radio', name='privacy', value='false', checked=true) 
+            | public
+            br
+            input(type='radio', name='privacy', value='true', checked=false) 
+            | private
+            br
+            input(type='submit', name='change', id='change',value='submit') 
+    script(src='/user.js')
+    
